@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Random Generator Mk 2", "Random Generator Mk 2.csproj", "{6BBE3217-5252-4F04-BE25-338C48B28940}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WOD Roller", "WOD Roller.csproj", "{6BBE3217-5252-4F04-BE25-338C48B28940}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Random Elements", "..\Random Elements\Random Elements.csproj", "{8D5E3631-2C03-479C-92B6-916ED379BA4F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{6BBE3217-5252-4F04-BE25-338C48B28940}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BBE3217-5252-4F04-BE25-338C48B28940}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BBE3217-5252-4F04-BE25-338C48B28940}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D5E3631-2C03-479C-92B6-916ED379BA4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D5E3631-2C03-479C-92B6-916ED379BA4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D5E3631-2C03-479C-92B6-916ED379BA4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D5E3631-2C03-479C-92B6-916ED379BA4F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

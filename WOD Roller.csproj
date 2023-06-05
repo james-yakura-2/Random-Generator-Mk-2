@@ -8,4 +8,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Random Elements\Random Elements.csproj" />
+  </ItemGroup>
+
 </Project>
