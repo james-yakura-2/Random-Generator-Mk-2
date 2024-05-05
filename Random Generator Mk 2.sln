@@ -3,9 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WOD Roller", "WOD Roller.csproj", "{6BBE3217-5252-4F04-BE25-338C48B28940}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Simple Roller", "Simple Roller.csproj", "{6BBE3217-5252-4F04-BE25-338C48B28940}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Random Elements", "..\Random Elements\Random Elements.csproj", "{8D5E3631-2C03-479C-92B6-916ED379BA4F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Random Elements", "Random Elements\Random Elements.csproj", "{20D18C49-CD88-4245-B603-9CA0BB188716}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarsWithoutNumber", "..\StarsWithoutNumber\StarsWithoutNumber.csproj", "{96ADC22C-5C90-4CCF-92FB-2FA21753CAA6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Parser", "..\Parser\Parser.csproj", "{E4BFF3AD-9B10-4D0F-84E1-00ED79F59FC4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Designer", "Desktop\Designer.csproj", "{BA2059B7-B86A-406F-876F-DF2119483CE8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +23,22 @@ Global
 		{6BBE3217-5252-4F04-BE25-338C48B28940}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6BBE3217-5252-4F04-BE25-338C48B28940}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6BBE3217-5252-4F04-BE25-338C48B28940}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8D5E3631-2C03-479C-92B6-916ED379BA4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8D5E3631-2C03-479C-92B6-916ED379BA4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8D5E3631-2C03-479C-92B6-916ED379BA4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8D5E3631-2C03-479C-92B6-916ED379BA4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{20D18C49-CD88-4245-B603-9CA0BB188716}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{20D18C49-CD88-4245-B603-9CA0BB188716}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{20D18C49-CD88-4245-B603-9CA0BB188716}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{20D18C49-CD88-4245-B603-9CA0BB188716}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96ADC22C-5C90-4CCF-92FB-2FA21753CAA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96ADC22C-5C90-4CCF-92FB-2FA21753CAA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96ADC22C-5C90-4CCF-92FB-2FA21753CAA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96ADC22C-5C90-4CCF-92FB-2FA21753CAA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4BFF3AD-9B10-4D0F-84E1-00ED79F59FC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4BFF3AD-9B10-4D0F-84E1-00ED79F59FC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4BFF3AD-9B10-4D0F-84E1-00ED79F59FC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4BFF3AD-9B10-4D0F-84E1-00ED79F59FC4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA2059B7-B86A-406F-876F-DF2119483CE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA2059B7-B86A-406F-876F-DF2119483CE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA2059B7-B86A-406F-876F-DF2119483CE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA2059B7-B86A-406F-876F-DF2119483CE8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

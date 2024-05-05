@@ -1,0 +1,254 @@
+[
+    {
+        "name":"d4",
+        "type":"die",
+        "contents":[],
+        "size":4
+    },
+    {
+        "name":"d4!",
+        "type":"combination",
+        "flatten":-1,
+        "contents":
+        [
+            {
+                "name":"d4! explosion 1",
+                "type":"die",
+                "size":3,
+                "contents":
+                [
+                    {
+                        "name":"d4! explosion 2",
+                        "type":"combination",
+                        "contents":
+                        [
+                            4,
+                            {
+                                "name":"d4! explosion 3",
+                                "type":"pointer",
+                                "contents":[],
+                                "referent":"d4! explosion 1"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name":"d6",
+        "type":"die",
+        "contents":[],
+        "size":6
+    },
+    {
+        "name":"d6!",
+        "type":"combination",
+        "flatten":-1,
+        "contents":
+        [
+            {
+                "name":"d6! explosion 1",
+                "type":"die",
+                "size":5,
+                "contents":
+                [
+                    {
+                        "name":"d6! explosion 2",
+                        "type":"combination",
+                        "contents":
+                        [
+                            6,
+                            {
+                                "name":"d6! explosion 3",
+                                "type":"pointer",
+                                "contents":[],
+                                "referent":"d6! explosion 1"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name":"d8",
+        "type":"die",
+        "contents":[],
+        "size":8
+    },
+    {
+        "name":"d8!",
+        "type":"combination",
+        "flatten":-1,
+        "contents":
+        [
+            {
+                "name":"d8! explosion 1",
+                "type":"die",
+                "size":7,
+                "contents":
+                [
+                    {
+                        "name":"d8! explosion 2",
+                        "type":"combination",
+                        "contents":
+                        [
+                            8,
+                            {
+                                "name":"d8! explosion 3",
+                                "type":"pointer",
+                                "contents":[],
+                                "referent":"d8! explosion 1"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name":"d10",
+        "type":"die",
+        "contents":[],
+        "size":10
+    },
+    {
+        "name":"d10!",
+        "type":"combination",
+        "flatten":-1,
+        "contents":
+        [
+            {
+                "name":"d10! explosion 1",
+                "type":"die",
+                "size":9,
+                "contents":
+                [
+                    {
+                        "name":"d10! explosion 2",
+                        "type":"combination",
+                        "contents":
+                        [
+                            10,
+                            {
+                                "name":"d10! explosion 3",
+                                "type":"pointer",
+                                "contents":[],
+                                "referent":"d10! explosion 1"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name":"d12",
+        "type":"die",
+        "contents":[],
+        "size":12
+    },
+    {
+        "name":"d12!",
+        "type":"combination",
+        "flatten":-1,
+        "contents":
+        [
+            {
+                "name":"d12! explosion 1",
+                "type":"die",
+                "size":11,
+                "contents":
+                [
+                    {
+                        "name":"d12! explosion 2",
+                        "type":"combination",
+                        "contents":
+                        [
+                            12,
+                            {
+                                "name":"d12! explosion 3",
+                                "type":"pointer",
+                                "contents":[],
+                                "referent":"d12! explosion 1"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name":"d20",
+        "type":"die",
+        "contents":[],
+        "size":20
+    },
+    {
+        "name":"d20!",
+        "type":"combination",
+        "flatten":-1,
+        "contents":
+        [
+            {
+                "name":"d20! explosion 1",
+                "type":"die",
+                "size":19,
+                "contents":
+                [
+                    {
+                        "name":"d20! explosion 2",
+                        "type":"combination",
+                        "contents":
+                        [
+                            20,
+                            {
+                                "name":"d20! explosion 3",
+                                "type":"pointer",
+                                "contents":[],
+                                "referent":"d20! explosion 1"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "name":"d%",
+        "type":"die",
+        "contents":[],
+        "size":4
+    },
+    {
+        "name":"d%!",
+        "type":"combination",
+        "flatten":-1,
+        "contents":
+        [
+            {
+                "name":"d%! explosion 1",
+                "type":"die",
+                "size":99,
+                "contents":
+                [
+                    {
+                        "name":"d%! explosion 2",
+                        "type":"combination",
+                        "contents":
+                        [
+                            100,
+                            {
+                                "name":"d%! explosion 3",
+                                "type":"pointer",
+                                "contents":[],
+                                "referent":"d%! explosion 1"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

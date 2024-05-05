@@ -1,0 +1,82 @@
+[
+    {
+        "name":"characters",
+        "type":"token bag",
+        "contents":
+        [
+            ["Nobody","Odysseus","Black","Brown","Rival",["Polyphemus","Neptune"]],
+            {
+                "name":"new character",
+                "type":"pusher",
+                "destinations":
+                [
+                    {
+                        "name":"loop back to characters",
+                        "type":"pointer",
+                        "referent":"characters",
+                        "contents":[]
+                    },
+                    {
+                        "name":"copy to encounters",
+                        "type":"pointer",
+                        "referent":"encounters",
+                        "contents":[]
+                    }
+                ],
+                "source":
+                {
+                    "name":"person",
+                    "type":"combination",
+                    "contents":
+                    [
+                        {
+                            "name":"first name",
+                            "type":"die",
+                            "contents":["John", "Jane","Jake","Jill"]
+                        },
+                        {
+                            "name":"last name",
+                            "type":"die",
+                            "contents":["Doe","Roe","Poe","Schmoe"]
+                        },
+                        {
+                            "name":"eye color",
+                            "type":"die",
+                            "contents":["Black","Blue","Brown","Grey","Green","Hazel","White"]
+                        },
+                        {
+                            "name":"hair color",
+                            "type":"die",
+                            "contents":["Black","Brown","Blond","Red","Grey","White","Bald"]
+                        },
+                        {
+                            "name":"relationship",
+                            "type":"die",
+                            "contents":["Friend","Boss","Lover","Rival"]
+                        },
+                        {
+                            "name":"target",
+                            "type":"select",
+                            "positions":[0,1],
+                            "contents":
+                            [
+                                {
+                                    "name":"pick a target",
+                                    "type":"pointer",
+                                    "referent":"characters",
+                                    "contents":[]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "contents":[]
+            }
+        ]
+    },
+    {
+        "name":"encounters",
+        "type":"deck",
+        "contents":[]
+    }
+]

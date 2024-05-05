@@ -1,0 +1,114 @@
+1. Generator
+A Generator either produces random data or proccesses it in some way.
+The basic Generator cannot be used on its own.
+All Generators have the following mandatory entries.
+name: A unique identifier for the generator.
+type: The type of the generator.
+contents: An array containing the initial options for the generator.
+All generators have the following optional entries.
+empty: The value to return if the generator is empty.
+
+1.1. Stateless Generator
+A Stateless Generator does not necessarily return the same result from pop() as it does from a previous peek().
+The basic Stateless Generator cannot be used.
+
+1.1.1. Die
+A Die has a fixed set of possible results, that cannot be altered by push() or pop().
+The type string for a Die is "die".
+All Dice have the following optional entries.
+size: After creating the die, numbers from 1 to this number will be added.
+
+1.1.2. Token Bag
+A Token Bag's contents can be altered by push() or pop().
+The type string for a Token Bag is "token bag".
+
+1.2. Stateful Generator
+A Stateful Generator will produce the same result for peek() until it receives a pop() or shuffle(), and will pop() the same result as peek().
+The basic Stateful Generator cannot be used.
+
+1.2.1. Deck
+A Deck has a fixed order, that is changed by shuffle().
+The type string for a Deck is "deck".
+
+1.3. Combination
+A Combination is a type of Generator that takes in multiple other Generators.
+The type string for a Combination is "combination"
+All Combinations have the following optional entries.
+flatten: Reduce the number of levels of combination by this many. -1 will create a single level.
+sort: List all results from least to most.
+
+1.3.2. Calculation
+A Calculation is a type of Combination that extracts data from the sub-Generators.
+The basic Calculation cannot be used on its own.
+All Calculations have the following optional entries.
+verbose: Display the dice taken in as well as the result. Flatten does nothing if Verbose is not used. A Verbose Flatten Sort will put the result first.
+
+1.3.2.1. Sum
+A Sum adds all Generators in the Combination.
+The type string for a Sum is "sum".
+
+1.3.2.2. Product
+A Product multiplies all Generators in the Combination.
+The type string for a Product is "product"
+
+1.3.2.3. Selection
+A Selection chooses a die at a specific position.
+The type string for a Selection is "select".
+All Selections have the following mandatory entries.
+position: The location of the die to return. If this is a whole number, the index will be used; otherwise, the fractional part will be used to find a median.
+
+1.3.2.4. Maximum
+A Maximum gets the highest Generator in the Combination.
+The type string for a Maximum is "max".
+
+1.3.2.5. Minimum
+A Minimum gets the lowest Generator in the Combination.
+The type string for a Minimum is "min".
+
+1.3.2.6. Filter
+A Filter removes certain results from the Combination.
+The type string for a Filter is "filter".
+All Filters have the following mandatory entries.
+exclude: Results to be excluded.
+All Filters have the following optional entries.
+max: If both max and min are included, all results between max and min will be removed.
+
+1.3.2.7. Count
+A Count gets the number of results in the Combination.
+The type string for a Count is "count".
+
+1.3.2.8. Unique
+A Unique returns one of each result in the Combination.
+The type string for a Unique is "unique".
+
+1.4 Generator Pointer
+A Generator Pointer acts as though it were a specific other Generator; it both generates and is modified as though it were that other Generator. Generator Pointers are a pointer-type generator.
+The type string for a Generator Pointer is "pointer"
+All Generator Pointers have the following mandatory entries.
+referent: The name of the other generator this pointer acts as.
+
+1.5 Pushing Generator
+A Pushing Generator is a type of Generator that pushes its result to another Generator.
+The type string for a Pushing Generator is "pusher"
+All Pushing Generators have the following mandatory entries.
+source: A Generator or constant used to produce data.
+destinations: A map of other generators to arrays used to push data to them. These should almost always either be Generator Pointers or have Generater Pointers referring to them.
+
+1.6 Branch
+A Branch gives different draws depending on whether the variable is in the pass results.
+The type string for a Branch is "branch".
+All Branches have the following mandatory entries.
+var: A Generator or constant checked against the test list.
+test: A Generator, constant, or list checked against the variable.
+then: A Generator or constant returned if the variable is in the test list.
+else: A Generator or constant returned if the variable is not in the test list.
+All Branches have the following optional entries.
+verbose: Whether to display the var result as well as the returned result.
+pass through: Whether to pass a var result instead of the then or else result.
+
+1.7 Variable
+A Variable holds the last value stored in it.
+The type string for a Variable is "variable".
+
+2. Generator Parser
+The generator parser converts json files to Generators, as well as managing the connections between Generators (such as those involved in a Generator Pointer). 
