@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Random_Elements.Processors.Aggregations.Math
 {
+    /// <summary>
+    /// Adds up a set of numerical results.
+    /// </summary>
     public class Sum : Summary<int,int>
     {
         /// <summary>

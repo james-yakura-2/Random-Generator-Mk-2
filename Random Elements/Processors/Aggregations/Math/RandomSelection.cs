@@ -7,6 +7,10 @@ using Random_Elements.Randomizers;
 
 namespace Random_Elements.Processors.Aggregations.Math
 {
+    /// <summary>
+    /// Chooses a single item from a set of results at random.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class RandomSelection<T> : Filter<T>
     {
 

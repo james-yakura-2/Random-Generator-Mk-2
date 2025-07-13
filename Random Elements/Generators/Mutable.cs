@@ -27,7 +27,7 @@ namespace Random_Elements.Generators
         }
 
         /// <summary>
-        /// Logic to retrieve an item from the Mutable while changing its state.
+        /// Logic to retrieve an item from the Mutable while changing its state, used by <see cref="Pop"/>.
         /// </summary>
         /// <remarks>popLogic should never be directly called, since it is not logged.</remarks>
         /// <returns>A randomly selected item.</returns>
@@ -43,7 +43,7 @@ namespace Random_Elements.Generators
         }
 
         /// <summary>
-        /// Logic to add an item to the Generator.
+        /// Logic to add an item to the Generator, used by <see cref="Push(T)"/>.
         /// </summary>
         /// <remarks>pushLogic should not be called directly, since universal logic may be stored in pushLogic.</remarks>
         /// <param name="value">The item to be added.</param>

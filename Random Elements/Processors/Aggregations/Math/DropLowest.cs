@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Random_Elements.Processors.Aggregations.Math
 {
+    /// <summary>
+    /// Removes the generator with the lowest falue from a set.
+    /// </summary>
     public class DropLowest : Filter<int>
     {
         public DropLowest(Aggregation<int> inputs) : base(inputs)

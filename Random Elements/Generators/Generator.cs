@@ -14,7 +14,7 @@ namespace Random_Elements.Generators
     public abstract class Generator<T>
     {
         /// <summary>
-        /// The most recent element generated, such as by <see cref="Peek()"/> or <see cref="Mutable{T}.Pop()"/>. Among other uses, this allows for easier verbose reporting.
+        /// The most recent element generated, such as by <see cref="Peek()"/> or <see cref="Mutable{T}.Pop()"/>. Among other uses (such as allowing multiple processors to reference the same draw), this allows for easier verbose reporting.
         /// </summary>
         public T Previous { get; internal set; }
 

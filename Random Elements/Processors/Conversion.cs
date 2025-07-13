@@ -7,6 +7,11 @@ using Random_Elements.Generators;
 
 namespace Random_Elements.Processors
 {
+    /// <summary>
+    /// Converts one type of result to another.
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
+    /// <typeparam name="U"></typeparam>
     public abstract class Conversion<T,U>:Generator<T>
     {
         public Generator<U> Input { get; set; }

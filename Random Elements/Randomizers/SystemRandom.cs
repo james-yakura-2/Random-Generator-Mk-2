@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Random_Elements.Randomizers
 {
+    /// <summary>
+    /// Uses the default system random number generator.
+    /// </summary>
     public class SystemRandom:Randomizer
     {
         Random rng;
