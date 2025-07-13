@@ -12,7 +12,7 @@ namespace Random_Elements.Processors
     /// Finds some summary parameter of a set of results.
     /// </summary>
     /// <typeparam name="T">The type of the summary parameter.</typeparam>
-    /// <typeparam name="U"></typeparam>
+    /// <typeparam name="U">The type of the input parameters.</typeparam>
     public abstract class Summary<T,U>:Generator<T>
     {
         public Aggregation<U> Inputs { get; set; }
