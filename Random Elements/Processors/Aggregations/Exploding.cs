@@ -29,7 +29,12 @@ namespace Random_Elements.Processors.Aggregations
             T newItem;
             do
             {
-                newItem=Generator.Peek();
+                if(Generator is Mutable<T>)
+                {
+                    newItem = ((Mutable<T>)Generator).Pop();
+                }
+                else
+                    newItem =Generator.Peek();
                 result.Add(newItem);
             }while(Explode(newItem));
             return result.ToArray();
