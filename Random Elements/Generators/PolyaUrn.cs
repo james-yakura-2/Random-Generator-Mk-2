@@ -82,5 +82,11 @@ namespace Random_Elements.Generators
         {
             return Baseline();
         }
+
+        public object Clone()
+        {
+            return new PolyaUrn<T>(Contents.ToArray(), RNG, Baseline);
+            throw new NotImplementedException();
+        }
     }
 }

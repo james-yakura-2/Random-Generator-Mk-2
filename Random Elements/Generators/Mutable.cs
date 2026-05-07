@@ -10,7 +10,7 @@ namespace Random_Elements.Generators
     /// Indicates that a Generator can have elements added and removed.
     /// </summary>
     /// <typeparam name="T"></typeparam>
-    public interface Mutable<T>
+    public interface Mutable<T>:ICloneable
     {
         /// <summary>
         /// Retrieve an item from the Mutable while changing its state.

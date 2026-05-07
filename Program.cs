@@ -201,7 +201,7 @@ createGenerator<int> setUpGeneratorFactory(bool staticDicePool, int mode)
                     int targetNumber = GetInt("What target number?");
                     int explodeNumber = GetInt("What number do you want to explode on?");
                     ExplodeIfGE[] explodingDice = new ExplodeIfGE[dicePool.Length];
-                    underlying = new Flatten<int>(new Aggregation<int>[] { new MultiGenerator<int>(dicePool) });
+                    underlying = new Flatten<int>( explodingDice );
                     for (int i = 0; i < explodingDice.Length; i++)
                         explodingDice[i] = new ExplodeIfGE(dicePool[i], explodeNumber);
                     { return new Count<int>(new Exceeds(underlying, targetNumber)); }

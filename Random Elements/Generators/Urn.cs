@@ -143,5 +143,11 @@ namespace Random_Elements.Generators
         {
             return Baseline();
         }
+
+        public object Clone()
+        {
+            Urn<T> result=new Urn<T>(Contents.ToArray(), RNG, Baseline, Revert);
+            return result;
+        }
     }
 }

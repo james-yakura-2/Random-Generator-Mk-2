@@ -35,7 +35,7 @@ namespace Random_Elements.Generators
         /// <example>
         /// OneRandomToken()
         /// {
-        ///     
+        ///     return new int[]{1,Contents.Count+1};
         /// }
         /// </example>
         public RecalculateFraction Recalculate { get; set; }
